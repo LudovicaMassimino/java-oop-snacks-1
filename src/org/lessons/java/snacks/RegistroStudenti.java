@@ -13,6 +13,7 @@ public class RegistroStudenti {
 
 	// costruttore senza parametri per inizializzare il registro vuoto:
 	public RegistroStudenti() {
+
 		listaStudenti = new Studente[30]; // fisso una dimensione 
 		numStudenti = 0; // inizializzo
 	}
