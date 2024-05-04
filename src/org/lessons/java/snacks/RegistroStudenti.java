@@ -14,7 +14,7 @@ public class RegistroStudenti {
 	// costruttore senza parametri per inizializzare il registro vuoto:
 	public RegistroStudenti() {
 
-		listaStudenti = new Studente[30]; // fisso una dimensione 
+		listaStudenti = new Studente[5]; // fisso una dimensione 
 		
 		numStudenti = 0; // inizializzo
 	}
@@ -23,8 +23,14 @@ public class RegistroStudenti {
 	public void aggiungiStudente(String nome, String cognome) {
 		
 		Studente nuovoStudente = new Studente(nome, cognome);
-		listaStudenti[numStudenti] = nuovoStudente; // per aggiungere lo studente all'array
-		numStudenti++; // incrementa il n° di studenti nel registro
+		
+		// creo un if per dirgli di stampare fino alla dimensione fissata se no uscirà un messaggio, se l'array è più lungo non stamperà gli studenti oltre quella dimensione
+		if(numStudenti < listaStudenti.length) {
+			listaStudenti[numStudenti] = nuovoStudente; // per aggiungere lo studente all'array
+			numStudenti++; // incrementa il n° di studenti nel registro
+		} else {
+			System.out.println("Il Registro Studenti è pieno");
+		}
 	}
 	
 	// metodo per stampare la lista degli studenti
