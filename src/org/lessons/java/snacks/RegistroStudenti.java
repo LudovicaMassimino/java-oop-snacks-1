@@ -15,6 +15,7 @@ public class RegistroStudenti {
 	public RegistroStudenti() {
 
 		listaStudenti = new Studente[30]; // fisso una dimensione 
+		
 		numStudenti = 0; // inizializzo
 	}
 	
